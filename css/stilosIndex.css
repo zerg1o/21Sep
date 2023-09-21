@@ -1,0 +1,707 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.verboYou {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+}
+
+html {
+    background: radial-gradient(circle at 30% 100%, #008df1 30%, #082772 70%);
+    height: 100%;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+}
+
+body {
+    overflow: hidden;
+}
+
+.heart {
+    display: flex;
+}
+
+.heart:hover {
+    cursor: pointer;
+}
+
+.borbuja {
+    border-radius: 0px 10px 10px 10px;
+    background-color: white;
+    color: black;
+    padding: 10px 5px;
+    margin-top: 10px;
+    border: 1px solid red;
+    opacity: 0;
+    transition: .3s;
+    display: none;
+}
+.borbuja2 {
+    border-radius: 10px 10px 10px 0px;
+    background-color: white;
+    color: black;
+    padding: 0px 5px;
+    border: 1px solid red;
+    opacity: 0;
+    transition: .3s;
+    position: absolute;
+    top: -46px;
+    font-size: 10pt;
+    width: 65px;
+    left: 30px;
+}
+#imgoso:hover .borbuja2{
+    opacity: 1;
+}
+.activa {
+    opacity: 1;
+}
+
+.titulo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 86px;
+    font-size: 14pt;
+    font-weight: bold;
+    color: white;
+
+}
+.typed{
+    pointer-events: none;
+}
+/* .parrafoT{
+    border-right: 4px solid ;
+    animation: typing 25s steps(62), blink .5s infinite step-end alternate;
+    overflow: hidden;
+} */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.palabras {
+    width: 340px;
+    color: white;
+    margin-top: 20px;
+}
+
+#jardin {
+    width: 100%;
+    overflow: hidden;
+    height: 87px;
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    pointer-events: none;
+}
+
+.pasto {
+    background: radial-gradient(circle at 30% 100%, #279343 30%, #05c34c 70%);
+    border: 0.5px solid #0bad78;
+    width: 35px;
+    height: 35px;
+    bottom: -15px;
+    border-radius: 0px 220px 0px 220px;
+    rotate: 45deg;
+    position: absolute;
+    transform: skew(45deg) rotate(44deg);
+    box-shadow: -5px 0px 5px -5px rgba(0, 0, 0, 0.3);
+}
+
+.estrellas {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: white;
+    right: 25px;
+    top: 19px;
+    border-radius: 50%;
+}
+
+.petalo-curvo {
+    background: radial-gradient(circle at 30% 100%, #f7c31a 30%, #ffd754 70%);
+    border: 0.5px solid #f7c31a;
+    width: 35px;
+    height: 35px;
+    border-radius: 0px 220px 0px 220px;
+    rotate: 45deg;
+    position: absolute;
+    transform: skew(45deg) rotate(44deg);
+    box-shadow: -5px 0px 5px -5px rgba(0, 0, 0, 0.3);
+}
+
+.petalo-recto {
+    background-color: #ffd754;
+    width: 35px;
+    height: 35px;
+    border-radius: 0px 220px 0px 220px;
+    rotate: 45deg;
+    position: absolute;
+    transform: skew(45deg) rotate(44deg);
+}
+
+.contenedora {
+    width: 100%;
+    height: 7rem;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    bottom: 0;
+    position: absolute;
+}
+
+#line {
+    width: 53px;
+    height: 1px;
+    background-color: white;
+    position: absolute;
+    right: 31px;
+    top: 38px;
+    transform: rotate(-25deg);
+}
+
+.yotodo {
+    position: absolute;
+    right: 30px;
+    top: 50px;
+    color: white;
+}
+
+.centroText {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    color: white;
+}
+
+.girasol {
+    position: relative;
+    width: 409px;
+    height: 300px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    animation: x 1.8s linear infinite alternate;
+
+}
+
+@keyframes x {
+    0% {
+        transform: translateX(0px) translateY(0px);
+        ;
+    }
+
+    50% {
+        transform: translateX(12.5px) translateY(12.5px);
+    }
+
+    100% {
+        transform: translateX(25px) translateY(25px);
+    }
+}
+#Oscurecer{
+    /* display: none; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-color: rgba(0, 0, 0, 0); */
+  background-color: rgba(0, 0, 0);
+  z-index: 2;
+  pointer-events: none;
+  transition: background-color 3s ease;
+}
+.overlay-active {
+    background-color: rgba(201, 126, 126, 0.932);
+    pointer-events: auto;
+  }
+.rama {
+    width: 5px;
+    height: 370px;
+    background-color: rgb(134, 91, 27);
+    transform: translate(-50%, 0) rotate(0deg);
+    transform-origin: left center;
+    animation: torcer 1.8s 1;
+    position: absolute;
+    left: 196px;
+    z-index: -1;
+}
+#btnModal{
+    background: #28a745;
+    border: 0px;
+    margin-top: 30px;
+    color: white;
+    border-radius: 5px;
+    width: 73px;
+    height: 36px;
+}
+
+#inputNombre {
+    border-radius: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    margin-top: 20px;
+}
+#inputNombre:focus{
+    outline: none;
+    border-radius: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-color: #28a745;
+    
+}
+.centradoModal {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.contenatModal {
+    width: 380px;
+    padding: 15px;
+    height: 227px;
+    background-color: white;
+    border-radius: 5px;
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+#cruzCerrar{
+    position: absolute;
+    right: 1rem;
+    top: 0.5rem;
+}
+#cruzCerrar img{
+    width: 1.25rem;
+    pointer-events: none;
+}
+.modal {
+    display: none;
+    /* Ocultar el modal de forma predeterminada */
+    position: fixed;
+    /* Posición fija */
+    z-index: 1;
+    /* Z-index para que esté por encima de otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Ancho al 100% */
+    height: 100%;
+    /* Altura al 100% */
+    overflow: auto;
+    /* Habilitar desplazamiento si el contenido es mayor que el modal */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Fondo semitransparente */
+}
+
+/* Estilos para el contenido del modal */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    /* Margen vertical y centrado horizontalmente */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    /* Ancho del contenido del modal */
+}
+
+/* Estilos para el botón de cierre */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@keyframes torcer {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+
+    50% {
+        transform: translateX(50px) translateY(50px);
+    }
+
+    100% {
+        transform: translateY(100px) translateX(0) rotate(180deg);
+    }
+}
+
+
+.petalo {
+    position: absolute;
+    width: 34px;
+    height: 54px;
+    display: flex;
+    justify-content: center;
+}
+
+@keyframes moving {
+    0% {
+        transform: skew(43deg) rotate(44deg);
+    }
+
+    50% {
+        transform: skew(40deg) rotate(44deg);
+    }
+
+    100% {
+        transform: skew(20deg) rotate(44deg);
+    }
+}
+.divoso{
+    top: 0;
+    left: -36px;
+    position: absolute;
+    rotate: 90deg;
+}
+.divoso img{
+    width: 50px;
+}
+.centro {
+    width: 90px;
+    height: 90px;
+    background-color: brown;
+    border-radius: 50%;
+    position: absolute;
+    top: 59px;
+    z-index: 2;
+}
+
+.petalo:nth-child(1) {
+    top: 133px;
+    rotate: 180deg;
+    left: 195px;
+}
+
+.petalo:nth-child(2) {
+    left: 179px;
+    top: 131px;
+    rotate: 205deg;
+}
+
+.petalo:nth-child(3) {
+    top: 125px;
+    left: 165px;
+    rotate: 226deg;
+}
+
+.petalo:nth-child(4) {
+    left: 152px;
+    top: 117px;
+    rotate: 241deg;
+}
+
+.petalo:nth-child(5) {
+    top: 104px;
+    left: 143px;
+    rotate: -101deg;
+}
+
+.petalo:nth-child(6) {
+    top: 90px;
+    left: 138px;
+    rotate: -87deg;
+}
+
+.petalo:nth-child(7) {
+    top: 75px;
+    left: 137px;
+    rotate: -76deg;
+}
+
+.petalo:nth-child(8) {
+    top: 61px;
+    left: 140px;
+    rotate: -60deg;
+}
+
+.petalo:nth-child(9) {
+    top: 47px;
+    left: 145px;
+    rotate: -44deg;
+}
+
+.petalo:nth-child(10) {
+    top: 36px;
+    left: 155px;
+    rotate: -33deg;
+}
+
+.petalo:nth-child(11) {
+    top: 27px;
+    left: 166px;
+    rotate: -18deg;
+}
+
+.petalo:nth-child(12) {
+    top: 22px;
+    left: 179px;
+    rotate: -6deg;
+}
+
+.petalo:nth-child(13) {
+    top: 21px;
+    left: 193px;
+    rotate: 7deg;
+}
+
+.petalo:nth-child(14) {
+    left: 208px;
+    top: 22px;
+    rotate: 23deg;
+}
+
+.petalo:nth-child(15) {
+    left: 221px;
+    top: 28px;
+    rotate: 39deg;
+}
+
+.petalo:nth-child(16) {
+    left: 232px;
+    top: 37px;
+    rotate: 48deg;
+}
+
+.petalo:nth-child(17) {
+    left: 241px;
+    top: 48px;
+    rotate: 58deg;
+}
+
+.petalo:nth-child(18) {
+    left: 247px;
+    top: 61px;
+    rotate: 70deg;
+}
+
+.petalo:nth-child(19) {
+    top: 76px;
+    left: 249px;
+    rotate: 85deg;
+}
+
+.petalo:nth-child(20) {
+    top: 91px;
+    left: 248px;
+    rotate: 96deg;
+}
+
+.petalo:nth-child(21) {
+    top: 105px;
+    left: 242px;
+    rotate: 112deg;
+}
+
+.petalo:nth-child(22) {
+    top: 117px;
+    left: 232px;
+    rotate: 130deg;
+}
+
+.petalo:nth-child(23) {
+    top: 125px;
+    left: 219px;
+    rotate: 150deg;
+}
+
+.petalo:nth-child(24) {
+    top: 131px;
+    left: 208px;
+    rotate: 161deg;
+}
+
+/*atras*/
+.petalo:nth-child(25) {
+    top: 132px;
+    rotate: 188deg;
+    left: 185px;
+    z-index: -1;
+}
+
+.petalo:nth-child(26) {
+    left: 171px;
+    top: 128px;
+    rotate: 214deg;
+    z-index: -1;
+}
+
+.petalo:nth-child(27) {
+    top: 123px;
+    left: 160px;
+    rotate: 235deg;
+    z-index: -1;
+}
+
+.petalo:nth-child(28) {
+    left: 147px;
+    top: 109px;
+    rotate: 246deg;
+    z-index: -1;
+}
+
+.petalo:nth-child(29) {
+    top: 95px;
+    left: 140px;
+    rotate: -98deg;
+    z-index: -1;
+}
+
+.petalo:nth-child(30) {
+    top: 80px;
+    left: 138px;
+    rotate: -87deg;
+    z-index: -1;
+}
+
+.petalo:nth-child(31) {
+    top: 63px;
+    left: 140px;
+    rotate: -76deg;
+    z-index: -1;
+}
+
+.petalo:nth-child(32) {
+    top: 52px;
+    left: 143px;
+    rotate: -54deg;
+    z-index: -1;
+}
+
+.petalo:nth-child(33) {
+    top: 39px;
+    left: 152px;
+    rotate: -44deg;
+    z-index: -1;
+}
+
+.petalo:nth-child(34) {
+    top: 30px;
+    left: 163px;
+    rotate: -30deg;
+    z-index: -1;
+}
+
+.petalo:nth-child(35) {
+    top: 24px;
+    left: 176px;
+    rotate: -18deg;
+    z-index: -1;
+}
+
+.petalo:nth-child(36) {
+    top: 22px;
+    left: 189px;
+    rotate: -4deg;
+    z-index: -1;
+}
+
+.petalo:nth-child(37) {
+    top: 22px;
+    left: 202px;
+    rotate: 11deg;
+    z-index: -1;
+}
+
+.petalo:nth-child(38) {
+    left: 217px;
+    top: 27px;
+    rotate: 26deg;
+    z-index: -1;
+}
+
+.petalo:nth-child(39) {
+    left: 227px;
+    top: 33px;
+    rotate: 41deg;
+    z-index: -1;
+}
+
+.petalo:nth-child(40) {
+    left: 237px;
+    top: 42px;
+    rotate: 51deg;
+    z-index: -1;
+}
+
+.petalo:nth-child(41) {
+    left: 245px;
+    top: 55px;
+    rotate: 63deg;
+    z-index: -1;
+}
+
+.petalo:nth-child(42) {
+    left: 249px;
+    top: 70px;
+    rotate: 74deg;
+    z-index: -1;
+}
+
+.petalo:nth-child(43) {
+    top: 84px;
+    left: 249px;
+    rotate: 88deg;
+    z-index: -1;
+}
+
+.petalo:nth-child(44) {
+    top: 98px;
+    left: 246px;
+    rotate: 103deg;
+    z-index: -1;
+}
+
+.petalo:nth-child(45) {
+    top: 115px;
+    left: 236px;
+    rotate: 114deg;
+    z-index: -1;
+}
+
+.petalo:nth-child(46) {
+    top: 124px;
+    left: 224px;
+    rotate: 135deg;
+    z-index: -1;
+}
+
+.petalo:nth-child(47) {
+    top: 130px;
+    left: 213px;
+    rotate: 152deg;
+    z-index: -1;
+}
+
+.petalo:nth-child(48) {
+    top: 133px;
+    left: 199px;
+    rotate: 165deg;
+    z-index: -1;
+}
